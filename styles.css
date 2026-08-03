@@ -159,26 +159,17 @@ a{ color:inherit; }
 }
 
 /* ---------- HERO ---------- */
-/* full-viewport-height, flex column with justify-content:space-between —
-   an empty spacer above the content and the scroll cue below create two
-   equal gaps, so the centered text always lands in the vertical middle
-   and decoration (bird) has its own untouched band at the top. This holds
-   at any viewport width, so no per-breakpoint collision math is needed. */
+/* compact, content-hugging hero — no forced full-viewport height. The
+   spacer is a fixed-height band that reserves clearance for the bird so
+   the centered text column never needs width-dependent collision math,
+   without stretching the page with artificial empty space. */
 .hero{
   position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
-  min-height:100svh;
-  min-height:100vh;
-  padding:8px 0 28px;
+  padding:28px 0 40px;
   overflow:hidden;
+  text-align:center;
 }
-/* min-height is the real safety net for the bird's clearance: even on a
-   very short viewport where the flex gaps collapse to 0, the spacer's own
-   box still reserves this much room before the text column can start. */
-.hero-spacer{ flex:0 0 auto; min-height:180px; }
+.hero-spacer{ height:130px; }
 .hero-bg{
   position:absolute; inset:0;
   pointer-events:none;
@@ -314,7 +305,7 @@ h1 .accent{ color:var(--rust); }
 }
 
 .scroll-cue{
-  flex:0 0 auto;
+  margin:36px auto 0;
   width:22px; height:36px;
   border:2px solid var(--line);
   border-radius:14px;
@@ -644,7 +635,7 @@ h1 .accent{ color:var(--rust); }
   .field-card-art svg{ width:190px; height:190px; }
   .field-card-art img{ width:300px; }
   .hero-bird{ width:200px; top:0; right:4%; }
-  .hero-spacer{ min-height:230px; }
+  .hero-spacer{ height:210px; }
   .footer-ducks{ width:230px; }
   .footer-capybara{ width:150px; }
   .fab{ right:32px; bottom:32px; }
