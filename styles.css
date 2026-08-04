@@ -254,6 +254,12 @@ a{ color:inherit; }
 }
 .eyebrow-rust{ color:var(--rust); }
 
+.hero-content .eyebrow{ margin-bottom:4px; }
+.eyebrow-acronym{
+  font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-soft); font-weight:600; margin-bottom:14px;
+}
+
 h1{
   font-family:'Fraunces',serif;
   font-optical-sizing:auto;
