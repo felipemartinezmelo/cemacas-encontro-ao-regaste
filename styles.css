@@ -536,13 +536,13 @@ h1 .accent{ color:var(--rust); }
   pointer-events:none;
 }
 .footer-ducks{
-  width:175px; aspect-ratio:1550/524; height:auto;
+  width:clamp(150px, 42vw, 215px); aspect-ratio:1550/524; height:auto;
   margin-left:-10px;
   animation:waddle 4.5s ease-in-out infinite;
   filter:drop-shadow(0 6px 10px rgba(0,0,0,0.4));
 }
 .footer-capybara{
-  width:112px; aspect-ratio:856/829; height:auto;
+  width:clamp(95px, 27vw, 140px); aspect-ratio:856/829; height:auto;
   margin-right:-6px;
   animation:breathe 4s ease-in-out infinite;
   filter:drop-shadow(0 6px 10px rgba(0,0,0,0.4));
@@ -649,8 +649,8 @@ h1 .accent{ color:var(--rust); }
   .field-card-art img{ width:300px; }
   .hero-bird{ width:200px; top:0; right:4%; }
   .hero-spacer{ height:210px; }
-  .footer-ducks{ width:230px; }
-  .footer-capybara{ width:150px; }
+  .footer-ducks{ width:clamp(215px, 24vw, 270px); }
+  .footer-capybara{ width:clamp(140px, 16vw, 185px); }
   .fab{ right:32px; bottom:32px; }
 }
 
